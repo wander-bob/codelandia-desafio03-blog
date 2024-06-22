@@ -1,5 +1,12 @@
+/* Defaults */
 :root{ 
   font-size: 62.5%;
+  --clr--purple-primary: #846AFF;
+  --clr-dark-primary: #121214;
+  --clr-dark-secundary: #7C7C8A;
+  --clr-light-primary: #FFF;
+  --clr-light-secundary: #EAEAEA;
+  --clr-background: #F8F8FF;
 }
 * { 
   margin: 0;
@@ -7,6 +14,9 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  color: #121214;
 }
 a {
   text-decoration: none;
@@ -14,3 +24,57 @@ a {
 input, textarea, button, fieldset {
   border: none;
 }
+body {
+  background-color: var(--clr-background);
+}
+#container {
+  padding-inline: 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
+.btn-primary {
+  padding: 1.4rem 3.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--clr-light-primary);
+  background: var(--clr--purple-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 0.4rem;
+  transition: filter 0.5s;
+  cursor: pointer;
+}
+.btn-primary:hover{
+  filter: opacity(0.9);
+}
+header, main {
+  padding-block: 6.4rem;
+}
+/* header */
+header {
+  display: grid;
+  place-items: center;
+  gap: 2.4rem;
+}
+header img.logo {
+  max-width: 20rem;
+}
+header .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  text-align: center;
+}
+header .content h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 120%;
+}
+header .content h1>span {
+  font-size: 2.4rem;
+  color: var(--clr--purple-primary);
+}
+header .content p {
+  line-height: 150%;
+}
+
